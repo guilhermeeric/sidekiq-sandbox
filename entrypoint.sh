@@ -3,6 +3,7 @@
 rm -f /var/app/tmp/pids/server.pid
 
 echo "Creating database..."
+bundle exec rake db:migrate
 bundle exec rake db:setup
 
 echo "Starting application..."
