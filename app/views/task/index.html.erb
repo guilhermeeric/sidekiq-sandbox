@@ -1,0 +1,16 @@
+<h1>Formulário para iniciar uma tarefa</h1>
+<br />
+<h2>Nível de complexidade da tarefa:</h2>
+<%= form_with url: "/task/create", method: :post do |form| %>
+  <%= form.radio_button :complexity, "0" %>
+  <%= form.label :complexity_high, "Alto" %>
+  <br />
+  <%= form.radio_button :complexity, "1" %>
+  <%= form.label :complexity_medium, "Médio" %>
+  <br />
+  <%= form.radio_button :complexity, "2" %>
+  <%= form.label :complexity_low, "Baixo" %>
+  <br />
+  <br />
+  <%= form.submit "Executar" %>
+<% end %>
